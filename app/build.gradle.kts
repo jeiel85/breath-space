@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-  namespace = "com.example"
+  namespace = "com.jeiel85.breathspace"
   compileSdk { version = release(36) { minorApiLevel = 1 } }
 
   defaultConfig {
-    applicationId = "com.example"
+    applicationId = "com.jeiel85.breathspace"
     minSdk = 24
     targetSdk = 36
     versionCode = 1
@@ -24,9 +24,9 @@ android {
     create("release") {
       val keystorePath = System.getenv("KEYSTORE_PATH") ?: "${rootDir}/my-upload-key.jks"
       storeFile = file(keystorePath)
-      storePassword = System.getenv("STORE_PASSWORD")
+      storePassword = System.getenv("STORE_PASSWORD") ?: "android"
       keyAlias = "upload"
-      keyPassword = System.getenv("KEY_PASSWORD")
+      keyPassword = System.getenv("KEY_PASSWORD") ?: "android"
     }
     create("debugConfig") {
       storeFile = file("${rootDir}/debug.keystore")

@@ -1,0 +1,17 @@
+# Gradle files
+.gradle/
+build/
+app/build/
+
+# Local configuration
+local.properties
+.env
+
+# Keystores and signing
+*.jks
+*.keystore
+!debug.keystore.base64
+
+# OS generated files
+.DS_Store
+Thumbs.db

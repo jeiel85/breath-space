@@ -1,0 +1,22 @@
+Find your calm and gather your breath in the middle of a chaotic day with 'Breath Space'.
+
+Breath Space is a local-first, offline-first mindfulness and deep breathing application designed to help you slow down, restore your unique frequency, and return to your natural rhythm.
+
+Sit back and align your mind with the slow, soothing expansion and contraction of our soft floating gradient orb. Just one minute of mindful breathing is all it takes to find peaceful clarity and release built-up stress.
+
+[Key Features]
+
+1. Elegant Atmospheric Breathing Orb
+- Features a premium, high-resolution glassmorphic breathing orb inspired by organic aesthetics. The orb dynamically pulses in size and color opacity matching the breathing cycle (Inhale, Hold, Exhale) to keep you relaxed and visually centered.
+
+2. Mind & Mood Coherence
+- Check in with your current feelings before and after each session. Whether you are feeling 'Peaceful', 'Slightly Anxious', 'Exhausted', or 'Overthinking', the app suggests tailored breathing intervals designed to harmonize your state of mind.
+
+3. Mindful Break Reminders
+- Schedule subtle, relaxing rest alarms at your preferred hour of the day. Adjust the daily reminder frequency to easily build a habit of mindfulness in your daily routine.
+
+4. Guaranteed Offline Local Privacy
+- Your personal emotional data and session duration statistics are kept strictly confidential. The app never sends your records to any remote server; everything is safely stored in local encrypted database sandbox storage on your phone.
+
+5. Medical Disclaimer
+- Breath Space is a relaxation and deep breathing aid. It is not designed to diagnose, monitor, or treat any medical conditions.

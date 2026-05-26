@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Bebecup full-backup rules.
+
+   Bebecup keeps all data on-device (Room DB at <internal>/databases/ and the
+   user-selected photo URIs referenced from it). There is no analytics, ad,
+   or external sync component, so no data needs to be excluded from Google
+   Auto Backup for privacy reasons.
+
+   The Room database is included implicitly. Photo URIs may not resolve on a
+   restored device because they are device-local persisted Photo Picker grants
+   — that limitation is by design (re-pick the source photos on the new
+   device) and is documented in docs/PRIVACY_POLICY_DRAFT.md.
+
+   See https://developer.android.com/guide/topics/data/autobackup for details.
+   Pre-API-31 devices read these rules; API 31+ uses data_extraction_rules.xml.
+-->
+<full-backup-content />
