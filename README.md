@@ -17,7 +17,7 @@ Breath Space is a local-first, offline-first Android mindfulness app designed to
 ## 🧘 핵심 가치 & 브랜딩
 
 - **정적인 몰입감 (Atmospheric Calm)**: 부드럽고 유려한 그라데이션 구체를 마주하며 자연스럽게 숨을 모으고 비워내도록 돕습니다.
-- **로컬 우선 정책 (Offline-First)**: 사용자의 민감한 감정 상태 기록이나 세션 통계 데이터는 외부 서버로 절대 송출되지 않으며, 디바이스의 안전한 격리 샌드박스 내에 암호화 저장됩니다.
+- **로컬 우선 정책 (Offline-First)**: 사용자의 감정 상태 기록이나 세션 통계 데이터는 외부 서버로 송출되지 않으며, 디바이스의 앱 전용 로컬 저장소에만 보관됩니다. 클라우드 백업도 비활성화되어 있습니다.
 - **일상과의 연결 (Gentle Reminders)**: 하루 중 마음에 휴식이 꼭 필요한 최적의 주기적 순간을 알림 설정으로 연결합니다.
 
 ---
@@ -86,12 +86,21 @@ breath-space/
 
 ## 🔐 릴리즈 빌드 및 서명 정책
 
-릴리즈 APK 및 AAB는 보안을 위해 로컬 환경 변수 주입을 지원하며, 기본적으로 프로젝트 루트에 자동 생성된 `my-upload-key.jks`를 통해 자동 Fallback 서명되도록 빌드 파일이 격리 구성되어 있습니다.
+릴리즈 APK 및 AAB는 보안을 위해 로컬 환경 변수 주입을 지원합니다. Play Console 업로드 전에는 로컬 `.keystore/my-upload-key.jks`를 백업해두거나 아래 환경 변수를 명시해 실제 업로드 키로 서명해야 합니다.
+
+- `KEYSTORE_PATH`
+- `STORE_PASSWORD`
+- `KEY_PASSWORD`
 
 ```bash
 # signed release APK 및 AAB 동시 빌드
 ./gradlew assembleRelease bundleRelease
+
+# Play Console 제출용 AAB/TXT를 바탕화면으로 내보내기
+./gradlew :app:exportReleaseToDesktop
 ```
+
+현재 버전: `v1.0.0`
 
 ---
 

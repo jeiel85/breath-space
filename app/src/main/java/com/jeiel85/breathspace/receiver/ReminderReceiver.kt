@@ -102,14 +102,12 @@ object ReminderScheduler {
         if (!enabled) return
 
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager ?: return
+        val now = System.currentTimeMillis()
         val baseCalendar = Calendar.getInstance().apply {
             set(Calendar.HOUR_OF_DAY, hour)
             set(Calendar.MINUTE, minute)
             set(Calendar.SECOND, 0)
             set(Calendar.MILLISECOND, 0)
-            if (timeInMillis <= System.currentTimeMillis()) {
-                add(Calendar.DAY_OF_YEAR, 1)
-            }
         }
 
         // Loop for frequency: 1, 2, or 3 times a day
@@ -126,6 +124,9 @@ object ReminderScheduler {
         for (i in 0 until maxAlarms) {
             val alarmCalendar = (baseCalendar.clone() as Calendar).apply {
                 add(Calendar.HOUR_OF_DAY, i * hourInterval)
+                while (timeInMillis <= now) {
+                    add(Calendar.DAY_OF_YEAR, 1)
+                }
             }
             
             val intent = Intent(context, ReminderReceiver::class.java).apply {
@@ -143,13 +144,13 @@ object ReminderScheduler {
             )
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                alarmManager.setExactAndAllowWhileIdle(
+                alarmManager.setAndAllowWhileIdle(
                     AlarmManager.RTC_WAKEUP,
                     alarmCalendar.timeInMillis,
                     pendingIntent
                 )
             } else {
-                alarmManager.setExact(
+                alarmManager.set(
                     AlarmManager.RTC_WAKEUP,
                     alarmCalendar.timeInMillis,
                     pendingIntent

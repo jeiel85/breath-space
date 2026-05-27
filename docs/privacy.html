@@ -143,7 +143,7 @@
       <div class="meta-date">시행일자: 2026년 5월 27일</div>
 
       <h2>1. 개인정보의 처리 개요</h2>
-      <p>본 <strong>Breath Space</strong> 애플리케이션(이하 "앱")은 사용자의 프라이버시를 최우선으로 생각하며, 철저하게 오프라인 및 로컬 우선(Offline-first) 정책으로 작동하도록 설계되었습니다. 앱은 사용자의 민감한 개인정보, 감정 데이터, 심호흡 로그를 수집, 저장, 전송하거나 외부 제3자에게 제공하지 않습니다.</p>
+      <p>본 <strong>Breath Space</strong> 애플리케이션(이하 "앱")은 사용자의 프라이버시를 최우선으로 생각하며, 철저하게 오프라인 및 로컬 우선(Offline-first) 정책으로 작동하도록 설계되었습니다. 앱은 사용자의 민감한 개인정보를 외부 서버로 수집, 전송하거나 외부 제3자에게 제공하지 않습니다.</p>
 
       <h2>2. 수집하는 개인정보 항목</h2>
       <p>앱은 어떠한 회원 가입 절차나 실명 인증을 요구하지 않으며, 다음을 포함한 개인식별정보를 일절 수집하지 않습니다.</p>
@@ -153,10 +153,11 @@
       </ul>
 
       <h2>3. 데이터의 로컬 저장 및 처리</h2>
-      <p>앱 내에서 입력되는 모든 정보(이전/이후 기분 기록, 세션 호흡 시간 및 빈도 설정 등)는 <strong>단말기 내부의 안전한 격리 샌드박스 데이터베이스(Room DB)에만 안전하게 로컬 저장</strong>됩니다.</p>
+      <p>앱 내에서 입력되는 정보(이전/이후 기분 기록, 세션 호흡 시간 및 알림 설정 등)는 <strong>단말기 내부의 앱 전용 로컬 저장소(Room DB)에만 저장</strong>됩니다.</p>
       <ul>
         <li>해당 데이터는 어떠한 클라우드나 원격 서버로 송출되지 않습니다.</li>
-        <li>앱을 스마트폰에서 삭제(제거)할 시 단말기에 로컬 저장된 데이터도 함께 완전히 영구 영구 삭제됩니다.</li>
+        <li>앱은 Android Auto Backup을 사용하지 않도록 설정되어 있습니다.</li>
+        <li>앱을 스마트폰에서 삭제(제거)할 시 단말기에 로컬 저장된 데이터도 함께 삭제됩니다.</li>
       </ul>
 
       <h2>4. 타사 라이브러리 및 SDK 정책</h2>
@@ -178,7 +179,7 @@
       <div class="meta-date">Effective Date: May 27, 2026</div>
 
       <h2>1. Overview</h2>
-      <p>The <strong>Breath Space</strong> application (the "App") is designed to prioritize user privacy above all else through a strict offline-first, local-only architecture. The App does not collect, harvest, store, transmit, or share your personal emotions, breathing session durations, or logs with any external parties or servers.</p>
+      <p>The <strong>Breath Space</strong> application (the "App") is designed to prioritize user privacy above all else through a strict offline-first, local-only architecture. The App does not collect, transmit, or share your personal information, emotions, breathing session durations, or logs with any external parties or servers.</p>
 
       <h2>2. Information Collection</h2>
       <p>We do not require account registration or authentication. The App collects absolutely no personally identifiable information (PII), such as:</p>
@@ -188,10 +189,11 @@
       </ul>
 
       <h2>3. Local Storage & Security</h2>
-      <p>All records entered during your usage (e.g., mood ratings before/after sessions, default relaxation duration preferences) are <strong>safely and securely stored within your local device's isolated database sandbox (Room DB)</strong>.</p>
+      <p>Records entered during your usage (e.g., mood ratings before/after sessions, default relaxation duration preferences, and reminder settings) are <strong>stored only in the app's local device storage (Room DB)</strong>.</p>
       <ul>
         <li>Your statistics never leave your smartphone and are never synced to any remote server.</li>
-        <li>Deleting the App from your device will permanently erase all local records, leaving no traces behind.</li>
+        <li>Android Auto Backup is disabled for the App.</li>
+        <li>Deleting the App from your device deletes the App's local records from that device.</li>
       </ul>
 
       <h2>4. Third-Party SDKs & Analytics</h2>

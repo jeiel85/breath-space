@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-   Bebecup data extraction rules (Android 12 / API 31+).
-
-   Cloud backup: include all app data (Room DB + shared prefs). Bebecup does
-   not store secrets, analytics, or third-party tokens, so no exclude rule is
-   needed. Photo URIs are persisted Photo Picker grants and may not resolve
-   on a restored device — that limitation is by design.
-
-   Device transfer: same policy as cloud backup. No rules omitted.
-
-   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
--->
+<!-- Android 12+ backup/transfer rules for Breath Space local user records. -->
 <data-extraction-rules>
-    <cloud-backup />
-    <device-transfer />
+    <cloud-backup>
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+    </device-transfer>
 </data-extraction-rules>

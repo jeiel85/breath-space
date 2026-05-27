@@ -11,7 +11,7 @@ A calm, local-first Android space for mindful deep breathing, offering slow imme
 ## 2. Website URL
 Set the website to:
 ```text
-https://jeiel85.github.io/breath-space/
+https://jeiel85.github.io/breath-space-android/
 ```
 
 ## 3. Topics (Tags)

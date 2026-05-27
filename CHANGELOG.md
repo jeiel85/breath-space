@@ -30,3 +30,11 @@ Breath Space 프로젝트의 버전별 변경 사항 일지입니다.
 - **Play Store 그래픽 완료**: 스토어 규격(512×512 앱 아이콘, 1024×500 피처 배너)을 생성하여 `store-graphics/` 디렉토리에 전용 배치.
 - **다국어 스토어 카피라이팅**: 한국어와 영어 두 버전으로 메인 타이틀, 80자 간략 소개, 4000자 상세 매뉴얼을 사전 제작 완료.
 - **가이드라인 구축**: 이 버전 관리를 계도하는 `AGENTS.md` 지침서와 `LICENSE` 라이선스 배포 완료.
+
+#### 5. Play Store 출시 감사 대응 (`fix`, `docs`, `graphics`)
+- `versionName`을 `CHANGELOG.md` 및 README의 `v1.0.0` 표기와 동일한 SemVer 형식으로 동기화.
+- Play Console 민감 권한 심사 부담을 낮추기 위해 정확 알람 권한(`SCHEDULE_EXACT_ALARM`)을 제거하고 일반 알람 예약으로 변경.
+- 감정 로그와 세션 기록이 클라우드 백업/기기 이전으로 복원되지 않도록 백업 정책을 비활성화하고, 개인정보 문구를 실제 로컬 저장 동작과 일치하도록 정정.
+- `store-graphics/` 및 `store-graphics/play-console-current/`의 앱 아이콘과 피처 그래픽을 Play Store 요구 규격(512×512, 1024×500)으로 재생성.
+- `<ko>` 및 `<en>` 태그가 포함된 Play Console 릴리즈 노트 파일을 추가.
+- Play Console 제출용 AAB와 릴리즈 노트 TXT를 바탕화면으로 내보내는 `:app:exportReleaseToDesktop` Gradle task를 추가.

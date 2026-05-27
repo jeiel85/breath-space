@@ -89,7 +89,7 @@
     <string name="info_title">정보 및 고지</string>
     <string name="info_app_story">Breath Space는 일상의 빠른 속도에서 벗어나 당신만의 템포를 되찾아 주기 위해 디자인되었습니다. 유려한 그라데이션 구체를 마주하며 오롯이 가슴 깊은 들숨과 날숨에만 흐름을 실어보세요.</string>
     <string name="info_app_manage">앱 관리</string>
-    <string name="info_app_privacy">데이터는 서버로 송출되지 않으며 오로지 사용하시는 스마트폰의 격리구역 내에 안전하고 암호화되어 로컬 저장됩니다.</string>
+    <string name="info_app_privacy">데이터는 서버로 송출되지 않으며 사용하시는 스마트폰의 앱 전용 저장소에만 로컬 저장됩니다. 클라우드 백업도 사용하지 않습니다.</string>
 
     <!-- String Arrays / Fallbacks -->
     <string-array name="notification_titles">

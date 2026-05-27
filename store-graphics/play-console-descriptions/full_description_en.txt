@@ -16,7 +16,7 @@ Sit back and align your mind with the slow, soothing expansion and contraction o
 - Schedule subtle, relaxing rest alarms at your preferred hour of the day. Adjust the daily reminder frequency to easily build a habit of mindfulness in your daily routine.
 
 4. Guaranteed Offline Local Privacy
-- Your personal emotional data and session duration statistics are kept strictly confidential. The app never sends your records to any remote server; everything is safely stored in local encrypted database sandbox storage on your phone.
+- Your personal emotional data and session duration statistics are kept strictly confidential. The app never sends your records to any remote server; everything is stored only in the app's local device storage, with cloud backup disabled.
 
 5. Medical Disclaimer
 - Breath Space is a relaxation and deep breathing aid. It is not designed to diagnose, monitor, or treat any medical conditions.

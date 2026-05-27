@@ -54,3 +54,18 @@ git push origin v1.0.0
 
 - 스토어 자산 수정 시에는 `store-graphics/` 하위 파일들을 교체하며, 변경 사유를 반드시 `CHANGELOG.md`와 커밋 메시지에 명확하게 기록합니다.
 - `release-notes.txt` 작성 시에는 `<ko>` 및 `<en>` 태그 형태로 구분하여 다국어 지원에 맞춘 릴리즈 노트를 출력합니다.
+
+### 릴리즈 산출물 바탕화면 내보내기
+
+사용자가 "새 버전 만들기" 또는 Play Console 제출용 산출물 생성을 요청하면 아래 Gradle task를 실행합니다.
+
+```bash
+./gradlew :app:exportReleaseToDesktop
+```
+
+이 task는 `bundleRelease`에 의존하므로 AAB를 먼저 빌드한 뒤, 사용자 바탕화면(OneDrive `바탕 화면` 우선)에 다음 두 파일을 내보냅니다.
+
+- `BreathSpace-vX.Y.Z-vcN.aab`
+- `BreathSpace-vX.Y.Z-vcN-release-notes.txt`
+
+TXT는 `store-graphics/play-console-current/release-notes.txt`를 원본으로 사용하며, `<ko>` 및 `<en>` 블록이 모두 있어야 합니다.

@@ -88,7 +88,7 @@
     <string name="info_title">Information &amp; Disclaimers</string>
     <string name="info_app_story">Breath Space is created to restore your unique frequency from the chaotic speed of modern life. Sit back and align your mind with the slow expansion of our soft floating orb.</string>
     <string name="info_app_manage">Local Storage</string>
-    <string name="info_app_privacy">Your records never leave your phone. Data is stored entirely offline and securely inside encrypted local sandbox storage.</string>
+    <string name="info_app_privacy">Your records never leave your phone. Data is stored only in local app storage, and cloud backup is disabled.</string>
 
     <!-- String Arrays / Fallbacks -->
     <string-array name="notification_titles">

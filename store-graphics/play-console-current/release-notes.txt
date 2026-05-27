@@ -1,0 +1,13 @@
+<ko-KR>
+Breath Space 첫 출시입니다.
+- 부드러운 호흡 애니메이션으로 들숨, 머묾, 날숨을 안내합니다.
+- 현재 기분을 기록하고 호흡 세션 전후의 변화를 로컬에 저장합니다.
+- 원하는 시간과 빈도로 쉼 알림을 설정할 수 있습니다.
+</ko-KR>
+
+<en-US>
+Initial release of Breath Space.
+- Guides inhale, hold, and exhale with a calm breathing animation.
+- Lets you record your mood before and after sessions locally on your device.
+- Supports gentle break reminders at your preferred time and frequency.
+</en-US>
